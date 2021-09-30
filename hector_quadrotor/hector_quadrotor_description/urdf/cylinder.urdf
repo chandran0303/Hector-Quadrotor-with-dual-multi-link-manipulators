@@ -1,0 +1,24 @@
+<robot name="simple_cylinder">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.23" radius="0.02"/>
+      </geometry>
+      <material name="blue">
+        <color rgba="0 0 .8 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.23" radius="0.02"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <inertia ixx="0.4" ixy="0.0" ixz="0.0" iyy="0.4" iyz="0.0" izz="0.2"/>
+    </inertial>
+  </link>
+  <gazebo reference="my_box">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+</robot>

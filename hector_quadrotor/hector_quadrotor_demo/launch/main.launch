@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <!-- Start Gazebo with wg world running in (max) realtime -->
+  <include file="$(find hector_gazebo_worlds)/launch/start.launch"/>
+  <param name="cylinder" command="cat $(find hector_quadrotor_description)/urdf/cylinder.urdf" />
+  <node name="cylinder_spawn" pkg="gazebo_ros" type="spawn_model" output="screen" args="-urdf -param cylinder -x 5 -y 5 -model simple_cylinder" /> 
+
+</launch>
